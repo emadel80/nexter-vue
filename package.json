@@ -4,13 +4,13 @@
   "description": "Nexter webpage",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/app.scss css/app.css",
+    "compile:sass": "node-sass assets/sass/app.scss assets/css/app.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/app.css -o assets/css/app.prefix.css",
+    "compress:css": "node-sass assets/css/app.prefix.css assets/css/app.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "devserver": "live-server --host=nexter.test --port=80",
     "watch:css": "npm run compile:sass -- -w",
-    "devserver": "live-server --host=nexter.test --port:80",
-    "start": "npm-run-all --parallel devserver watch:css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/app.css -o css/app.prefix.css",
-    "compress:css": "node-sass css/app.prefix.css css/app.min.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "start": "npm-run-all --parallel devserver watch:css"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "airbnb",
     "rent"
   ],
-  "author": "Jonas Schmedtmann",
+  "author": "Victor E. Del Castillo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/emadel80/nexter/issues"
