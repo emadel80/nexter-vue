@@ -1,0 +1,37 @@
+{
+  "name": "nexter",
+  "version": "1.0.0",
+  "description": "Nexter webpage",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/app.scss css/app.css",
+    "watch:css": "npm run compile:sass -- -w",
+    "devserver": "live-server --host=nexter.test --port:80",
+    "start": "npm-run-all --parallel devserver watch:css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/app.css -o css/app.prefix.css",
+    "compress:css": "node-sass css/app.prefix.css css/app.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emadel80/nexter.git"
+  },
+  "keywords": [
+    "nexter",
+    "airbnb",
+    "rent"
+  ],
+  "author": "Jonas Schmedtmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emadel80/nexter/issues"
+  },
+  "homepage": "https://github.com/emadel80/nexter#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "concat": "^1.0.3",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.0.0"
+  }
+}
