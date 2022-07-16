@@ -1,10 +1,11 @@
 $color-primary: #c69963;
+$color-secondary: #101d2c;
 
 :root {
   // GENERAL COLOR VARIABLES
 	--color-primary: #{$color-primary};
 	--color-primary-dark: #b28451;
-	--color-secondary: #101d2c;
+	--color-secondary: #{$color-secondary};
 	--color-grey-light-1: #f9f7f6;
 	--color-grey-light-2: #aaa;
 	--color-grey-dark-1: #54483a;
@@ -12,6 +13,7 @@ $color-primary: #c69963;
 
 	// BACKGROUND COLOR VARIABLES
 	--bg-primary: #{rgba($color-primary, .5)};
+	--bg-secondary: #{rgba($color-secondary, .93)};
 
 	// FONT VARIABLES
 	--font-primary: 'Nunito', sans-serif;
