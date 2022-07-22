@@ -1,37 +1,42 @@
 {
-  "name": "nexter",
+  "name": "nexter-vue",
   "version": "1.0.0",
   "description": "Nexter webpage",
-  "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass assets/sass/app.scss assets/css/app.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/app.css -o assets/css/app.prefix.css",
-    "compress:css": "node-sass assets/css/app.prefix.css assets/css/app.min.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css",
-    "devserver": "live-server --host=nexter.test --port=80",
-    "watch:css": "npm run compile:sass -- -w",
-    "start": "npm-run-all --parallel devserver watch:css"
+    "dev": "vite --host nexter-vue.test --port 80",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/css/app.css -o assets/css/app.prefix.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emadel80/nexter.git"
+    "url": "git+https://github.com/emadel80/nexter-vue.git"
   },
   "keywords": [
     "nexter",
+    "nexter-vue",
     "airbnb",
-    "rent"
+    "rent spaces"
   ],
   "author": "Victor E. Del Castillo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emadel80/nexter/issues"
+    "url": "https://github.com/emadel80/nexter-vue/issues"
   },
-  "homepage": "https://github.com/emadel80/nexter#readme",
+  "homepage": "https://github.com/emadel80/nexter-vue#readme",
+  "dependencies": {
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.2"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "concat": "^1.0.3",
-    "node-sass": "^7.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^10.0.0"
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.20.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0",
+    "vite": "^3.0.2"
   }
 }
