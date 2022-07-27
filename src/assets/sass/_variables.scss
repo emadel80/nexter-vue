@@ -1,0 +1,29 @@
+// COLORS
+$color-primary: #c69963;
+$color-prim-tint: rgba($color-primary, .5);
+
+// SHADOWS
+$shadow-light-1: 0 2rem 5rem rgba(#000, .1);
+$shadow-light-2: 0 2rem 5rem rgba(#000, .2);
+
+:root {
+	// COLORS
+	--color-primary: #{$color-primary};
+  --color-primary-dark: #b28451;
+	--color-secondary: #101d2c;
+	--color-grey-light-1: #f9f7f6;
+	--color-grey-light-2: #aaa;
+	--color-grey-dark-1: 	#54483a;
+	--color-grey-dark-2:	#6d5d4b;
+
+	// GRADIENTS
+	--grad-story-overlay: linear-gradient(#{$color-prim-tint}, #{$color-prim-tint});
+
+	// FONTS
+	--font-primary: 'Nunito', sans-serif;
+	--font-display: 'Josefin Sans', sans-serif;
+
+	// SHADOWS
+	--shadow-light-1: #{$shadow-light-1};
+	--shadow-light-2: #{$shadow-light-2};
+}

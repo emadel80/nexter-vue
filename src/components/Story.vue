@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue"
 import data from "@/assets/data/story.json"
+import StoryButton from "@/components/Button.vue"
 
 const story = ref(data)
 </script>
@@ -14,7 +15,7 @@ const story = ref(data)
 		<h3 class="heading-3 mb-sm">{{ story.title }}</h3>
 		<h2 class="heading-2 heading-2--dark mb-md">&ldquo;{{ story.subtitle }}&rdquo;</h2>
 		<p class="story__text">{{ story.content }}</p>
-		<button class="btn">{{ story.btn.content }}</button>
+		<StoryButton>{{ story.btn.content }}</StoryButton>
 	</article>
 </template>
 
