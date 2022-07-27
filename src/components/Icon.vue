@@ -13,7 +13,15 @@ const icon = computed(() => {
 </script>
 
 <template>
-  <svg>
+  <svg class="icon">
     <use :xlink:href="icon"></use>
   </svg>
 </template>
+
+<style lang="scss" scoped>
+.icon {
+  fill: var(--color-primary);
+  width: 2rem;
+  height: 2rem;
+}
+</style>
