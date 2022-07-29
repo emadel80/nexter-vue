@@ -35,13 +35,12 @@ const isKeyEquals = (key, index) => {
   return detailsKeys[index] === key
 }
 
-const applyRootTo = path => `src/${path}`
 </script>
 
 <template>
   <article class="home">
     <img 
-      :src="`${applyRootTo('assets/img')}/${content.image}`" 
+      :src="$assets(`img/${content.image}`)" 
       :alt="`House ${content.id}`"
       class="home__img">
     <CardIcon 

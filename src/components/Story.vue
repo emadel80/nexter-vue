@@ -8,14 +8,14 @@ const story = ref(data)
 
 <template>
 	<article class="story__pictures">
-		<img src="@/assets/img/story-1.jpeg" alt="Couple with new house" class="story__img--1">
-		<img src="@/assets/img/story-2.jpeg" alt="New house" class="story__img--2">
+		<img :src="$assets('img/story-1.jpeg')" alt="Couple with new house" class="story__img--1">
+		<img :src="$assets('img/story-2.jpeg')" alt="New house" class="story__img--2">
 	</article>
 	<article class="story__content">
 		<h3 class="heading-3 mb-sm">{{ story.title }}</h3>
 		<h2 class="heading-2 heading-2--dark mb-md">&ldquo;{{ story.subtitle }}&rdquo;</h2>
 		<p class="story__text">{{ story.content }}</p>
-		<StoryButton>{{ story.btn.content }}</StoryButton>
+		<StoryButton>Find your own home</StoryButton>
 	</article>
 </template>
 

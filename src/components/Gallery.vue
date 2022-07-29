@@ -3,7 +3,6 @@ import { ref } from "vue"
 import data from "@/assets/data/gallery.json"
 
 const images = ref(data)
-const imagePath = path => `src/assets/${path}`
 </script>
 
 <template>
@@ -13,7 +12,7 @@ const imagePath = path => `src/assets/${path}`
 			:key="image.id" 
 			:class="`gallery__item gallery__item--${image.id}`">
 			<img 
-				:src="imagePath(image.path)"
+				:src="$assets(image.path)"
 				:alt="`Gallery image ${image.id}`"
 				class="gallery__img">
 		</figure>

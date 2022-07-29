@@ -1,6 +1,7 @@
 // COLORS
 $color-primary: #c69963;
 $color-prim-tint: rgba($color-primary, .5);
+$color-faint-blue: rgba(#fff, .05);
 
 // SHADOWS
 $shadow-light-1: 0 2rem 5rem rgba(#000, .1);
@@ -15,6 +16,7 @@ $shadow-light-2: 0 2rem 5rem rgba(#000, .2);
 	--color-grey-light-2: #aaa;
 	--color-grey-dark-1: 	#54483a;
 	--color-grey-dark-2:	#6d5d4b;
+	--color-faint-blue: #{$color-faint-blue};
 
 	// GRADIENTS
 	--grad-story-overlay: linear-gradient(#{$color-prim-tint}, #{$color-prim-tint});
