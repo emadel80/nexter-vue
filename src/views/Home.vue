@@ -1,7 +1,6 @@
 <script setup>
 import Sidebar 	from '@/components/Sidebar.vue'
 import Header 	from '@/components/Header.vue'
-import Realtors from '@/components/Realtors.vue'
 import Features from '@/components/Features.vue'
 import Story 		from '@/components/Story.vue'
 import Homes 		from '@/components/Homes.vue'
@@ -13,7 +12,6 @@ import Footer 	from '@/components/Footer.vue'
   <main class="container">
 		<Sidebar />
 		<Header />
-		<Realtors />
 		<Features />
 		<Story />
 		<Homes />
